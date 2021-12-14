@@ -70,11 +70,7 @@ class DiagnosticReport:
         self.co2_list = []
 
         if diagnostic_file != '':
-            with open(diagnostic_file) as diagnostic_log:
-                self.read_diag_log(diagnostic_log)
-                #END diagnostic_log parser
-            self.calc_ge()
-            self.calc_life_support()
+            self.diagnostic_refresh(diagnostic_file)
         #END __init__
 
     def __str__(self):
@@ -94,6 +90,7 @@ class DiagnosticReport:
             self.read_diag_log(diagnostic_log)
             #END diagnostic_log parser
         self.calc_ge()
+        self.calc_life_support()
 
     def stream_size(self, line):
         """Calculates the length of row of the data in the log file."""
