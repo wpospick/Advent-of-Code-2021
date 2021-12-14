@@ -85,7 +85,7 @@ class Submarine:
                 # decreases aim by <magnitude> units.
                 self.aim -= magnitude
             case _:
-                print("you done fucked up a-a-ron...")
+                print("No direction passed")
                 print('  Direction: {dir}\n  Magnitude: {mag}').format(
                         dir=direction, mag=magnitude)
         #END match
